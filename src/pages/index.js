@@ -102,9 +102,6 @@ export default function Home() {
 
         localStorage.setItem(idSesion, JSON.stringify([...messages, newMessage, completion.data.choices[0].message]));
 
-        // chat.current.scrollTop = chat.current.scrollHeight;
-        // llevar el scroll al final
-        chat.current.scrollTop = chat.current.scrollHeight;
       } catch (e) {
         console.log(e);
         setError({
@@ -112,8 +109,10 @@ export default function Home() {
           message: 'Ha ocurrido un error, por favor vuelve a intentar'
         })
       }
-
       setIsTyping(false)
+      setTimeout(() => {
+        chat.current.scrollTop = chat.current.scrollHeight;
+      }, 100)
     }
   }
 
