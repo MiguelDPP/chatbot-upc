@@ -14,7 +14,8 @@ function Aside(
     promp,
     setPromp,
     chat,
-    isAsideActive
+    isAsideActive,
+    setIsAsideActive
   }
 ) {
   const [isEditing, setIsEditing] = useState(false);
@@ -93,6 +94,7 @@ function Aside(
             <li>
               <button
                 onClick={() => {
+                  setIsAsideActive(false);
                   setCurrentSesion(null);
                   setMessages([]);
                   setPromp('');

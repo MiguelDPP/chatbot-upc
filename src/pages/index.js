@@ -122,7 +122,7 @@ export default function Home() {
   return (
     <div>
       <Nav isAsideActive={isAsideActive} setIsAsideActive={setIsAsideActive} />
-      <Aside isAsideActive={isAsideActive} sesions={sesions} setSesions={setSesions} currentSesion={currentSesion} setCurrentSesion={setCurrentSesion} messages={messages} setMessages={setMessages} promp={promp} setPromp={setPromp} chat={chat}
+      <Aside isAsideActive={isAsideActive} setIsAsideActive={setIsAsideActive} sesions={sesions} setSesions={setSesions} currentSesion={currentSesion} setCurrentSesion={setCurrentSesion} messages={messages} setMessages={setMessages} promp={promp} setPromp={setPromp} chat={chat}
       />
       <div className="sm:ml-64 mx-auto shadow-lg rounded-lg" onClick={() => setIsAsideActive(false)}>
         <div className={`flex flex-row justify-between bg-white ${styles.chat}`}>
