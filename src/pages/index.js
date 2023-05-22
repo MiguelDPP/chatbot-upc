@@ -14,8 +14,10 @@ import Aside from '@/components/Aside';
 
 export default function Home() {
 
-  const chat = useRef(null);
+  // For the aside
+  const [isAsideActive, setIsAsideActive] = useState(false);
 
+  const chat = useRef(null);
 
   const configuration = new Configuration({
     apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
@@ -119,10 +121,10 @@ export default function Home() {
 
   return (
     <div>
-      <Nav />
-      <Aside sesions={sesions} setSesions={setSesions} currentSesion={currentSesion} setCurrentSesion={setCurrentSesion} messages={messages} setMessages={setMessages} promp={promp} setPromp={setPromp} chat={chat}
+      <Nav isAsideActive={isAsideActive} setIsAsideActive={setIsAsideActive} />
+      <Aside isAsideActive={isAsideActive} sesions={sesions} setSesions={setSesions} currentSesion={currentSesion} setCurrentSesion={setCurrentSesion} messages={messages} setMessages={setMessages} promp={promp} setPromp={setPromp} chat={chat}
       />
-      <div className="sm:ml-64 mx-auto shadow-lg rounded-lg">
+      <div className="sm:ml-64 mx-auto shadow-lg rounded-lg" onClick={() => setIsAsideActive(false)}>
         <div className={`flex flex-row justify-between bg-white ${styles.chat}`}>
           <div className="w-full px-5 flex flex-col justify-between">
             <div className={`flex flex-col mt-5 overflow-y-auto p-4 ${styles.chatContent}`} ref={chat}>
