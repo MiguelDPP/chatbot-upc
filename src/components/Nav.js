@@ -14,7 +14,7 @@ function Nav() {
             </button>
             <a href="#" className="flex ml-2 md:mr-24">
               {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="FlowBite Logo" /> */}
-              <Image
+              <img
                 src="/img/logo_upc2.png"
                 alt="Logo UPC"
                 width={150}
