@@ -22,6 +22,7 @@ function Aside(
 
   // Logic for sesions
   const changeSesion = (sesion) => {
+    setIsAsideActive(false);
     setCurrentSesion(sesion)
     if (sesion.promp) {
       setPromp(sesion.promp)
