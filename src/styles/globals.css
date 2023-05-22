@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +24,29 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+textarea:focus,
+input:focus,
+button:focus,
+select:focus {
+  outline: none;
 }
+
+/* Scroll del text area */
+textarea {
+  /* resize: none; */
+  overflow: auto;
+  height: 100%;
+}
+textarea::-webkit-scrollbar {
+  width: 0.5em;
+}
+textarea::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+textarea::-webkit-scrollbar-thumb {
+  background-color: #b2b0b0;
+  border-radius: 1em;
+}
+
