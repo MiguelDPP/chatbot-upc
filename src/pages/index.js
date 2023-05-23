@@ -126,7 +126,7 @@ export default function Home() {
       <div className="sm:ml-64 mx-auto shadow-lg rounded-lg" onClick={() => setIsAsideActive(false)}>
         <div className={`flex flex-row justify-between bg-white ${styles.chat}`}>
           <div className="w-full flex flex-col justify-between">
-            <div className={`flex px-5 flex-col mt-5 overflow-y-auto ${styles.chatContent}`} ref={chat}>
+            <div className={`flex px-5 flex-cols overflow-y-auto ${styles.chatContent}`} ref={chat}>
               {/* Mensajes */}
               {messages.map((message, index) => {
                 return (
