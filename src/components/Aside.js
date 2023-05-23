@@ -22,7 +22,7 @@ function Aside(
 
   // Logic for sesions
   const changeSesion = (sesion) => {
-    if (sesion.id === currentSesion?.id) {
+    if (sesion.id !== currentSesion?.id) {
       setIsAsideActive(false);
       setIsEditing(false);
     }
